@@ -55,6 +55,7 @@ The protection system detects:
 | Severe Protection Fault   |  128 |
 | Main Contactor Fault      |  256 |
 | Precharge Contactor Fault |  512 |
+
 Fault codes are represented using bitwise encoding, allowing multiple simultaneous faults to be represented within a single diagnostic value.
 
 # Cell Balancing
@@ -67,17 +68,16 @@ The controller:
 
 # BMS State Machine
 The BMS operates through defined operating states:
-OFF
+ OFF
  ↓
-INITIALIZE
+ INITIALIZE
  ↓
-PRECHARGE
+ PRECHARGE
  ↓
-IDLE
+ IDLE
  ├──→ CHARGING
  └──→ DISCHARGING
-
-FAULT
+ FAULT
 
 The state machine controls:
 - Main contactor
@@ -100,9 +100,9 @@ A timeout mechanism is also implemented to prevent the system from remaining ind
 
 # Fault Management
 Fault conditions are classified according to severity.
-0 → Normal
-1 → Warning
-2 → Disable Charging
-3 → Disable Discharging
-4 → Critical / Isolate Battery
+-0 → Normal
+-1 → Warning
+-2 → Disable Charging
+-3 → Disable Discharging
+-4 → Critical / Isolate Battery
 Critical faults cause the contactors to open and isolate the battery.
