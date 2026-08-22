@@ -55,4 +55,54 @@ The protection system detects:
 | Severe Protection Fault   |  128 |
 | Main Contactor Fault      |  256 |
 | Precharge Contactor Fault |  512 |
+Fault codes are represented using bitwise encoding, allowing multiple simultaneous faults to be represented within a single diagnostic value.
 
+# Cell Balancing
+The controller:
+- Identifies the highest-voltage cell
+- Activates its balancing path
+- Uses voltage hysteresis to prevent chattering
+- Maintains minimum ON/OFF timing
+- Stops balancing once the cell voltage difference falls below the defined threshold
+
+# BMS State Machine
+The BMS operates through defined operating states:
+OFF
+ ↓
+INITIALIZE
+ ↓
+PRECHARGE
+ ↓
+IDLE
+ ├──→ CHARGING
+ └──→ DISCHARGING
+
+FAULT
+
+The state machine controls:
+- Main contactor
+- Precharge contactor
+- Charge enable
+- Discharge enable
+- Fault response
+
+# Precharge System
+A DC-link precharge circuit is implemented using:
+- Precharge resistor
+- Precharge contactor
+- Main contactor
+- DC-link capacitor
+- Pack voltage measurement
+- DC-link voltage measurement
+Precharge completion is determined using:
+VDC ≥ 0.95 × VPACK
+A timeout mechanism is also implemented to prevent the system from remaining indefinitely in the PRECHARGE state.
+
+# Fault Management
+Fault conditions are classified according to severity.
+0 → Normal
+1 → Warning
+2 → Disable Charging
+3 → Disable Discharging
+4 → Critical / Isolate Battery
+Critical faults cause the contactors to open and isolate the battery.
