@@ -1,0 +1,44 @@
+## Validation & Testing
+
+The BMS architecture was tested under multiple simulated fault conditions.
+
+### Protection Testing
+
+Individual fault conditions were injected into the battery model to verify:
+
+- Over-temperature detection
+- Cell over-voltage detection
+- Cell under-voltage detection
+- Over-current detection
+- Cell imbalance detection
+- Low-SOC detection
+- Fault-code generation
+- Fault-action response
+
+### State Machine Testing
+
+The following state transitions were validated:
+
+- OFF → INITIALIZE
+- INITIALIZE → PRECHARGE
+- PRECHARGE → IDLE
+- IDLE → CHARGING
+- CHARGING → IDLE
+- IDLE → DISCHARGING
+- DISCHARGING → IDLE
+- Fault → FAULT state
+- Fault recovery after reset
+
+### Precharge Testing
+
+The precharge circuit was tested using the DC-link voltage feedback.
+
+The system transitions from PRECHARGE to IDLE once the DC-link voltage reaches the required fraction of pack voltage.
+
+A precharge timeout mechanism is also implemented to detect unsuccessful precharge.
+
+### Cell Balancing Testing
+
+Unequal cell conditions were introduced to verify the balancing controller.
+
+The controller successfully identified the highest-voltage cell and activated its corresponding balancing path.
