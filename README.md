@@ -9,7 +9,7 @@ The current implementation represents Version 1 of the BMS architecture and is b
 
 The BMS consists of the following major modules
 
-#System Architecture
+# System Architecture
 - Battery Pack Model
 - Cell Voltage Monitoring
 - Pack Current Measurement
@@ -27,9 +27,9 @@ The BMS consists of the following major modules
 - Contactor Fault Diagnostics
 - BMS Monitoring Dashboard
 
-#Key Features
+# Key Features
 
-#Battery Monitoring
+# Battery Monitoring
 The system monitors:
 - Individual cell voltages
 - Pack voltage
@@ -41,7 +41,7 @@ The system monitors:
 - SOC
 - SOH
 
-#Protection
+# Protection
 The protection system detects:
 | Fault                     | Code |
 | ------------------------- | ---: |
