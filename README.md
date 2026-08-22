@@ -67,18 +67,6 @@ The controller:
 - Stops balancing once the cell voltage difference falls below the defined threshold
 
 # BMS State Machine
-The BMS operates through defined operating states:
- OFF
- ↓
- INITIALIZE
- ↓
- PRECHARGE
- ↓
- IDLE
- ├──→ CHARGING
- └──→ DISCHARGING
- FAULT
-
 The state machine controls:
 - Main contactor
 - Precharge contactor
