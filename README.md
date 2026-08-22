@@ -6,6 +6,8 @@ This project presents a modular Battery Management System (BMS) developed in MAT
 The system was developed with an industrial-oriented architecture covering battery monitoring, protection, estimation, cell balancing, contactor management, precharge control, and fault handling.
 
 The current implementation represents Version 1 of the BMS architecture and is being developed as a simulation-first platform before future embedded hardware implementation.
+<img width="1061" height="777" alt="image" src="https://github.com/user-attachments/assets/6a4ffd04-e592-43a8-bf2c-dcdefda7949b" />
+
 
 The BMS consists of the following major modules
 
