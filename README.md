@@ -24,4 +24,31 @@ The BMS consists of the following major modules:
 - Precharge Control
 - Main Contactor Control
 - Contactor Fault Diagnostics
-- - BMS Monitoring Dashboard
+- BMS Monitoring Dashboard
+#Key Features
+#Battery Monitoring
+The system monitors:
+- Individual cell voltages
+- Pack voltage
+- Pack current
+- Individual cell temperatures
+- Maximum/minimum cell voltage
+- Cell voltage difference
+- Maximum cell temperature
+- SOC
+- SOH
+#Protection
+The protection system detects:
+| Fault                     | Code |
+| ------------------------- | ---: |
+| Cell Over-Voltage         |    1 |
+| Cell Under-Voltage        |    2 |
+| Over-Current              |    4 |
+| Over-Temperature          |    8 |
+| Under-Temperature         |   16 |
+| Cell Imbalance            |   32 |
+| Low SOC                   |   64 |
+| Severe Protection Fault   |  128 |
+| Main Contactor Fault      |  256 |
+| Precharge Contactor Fault |  512 |
+
