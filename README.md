@@ -7,13 +7,14 @@ The system was developed with an industrial-oriented architecture covering batte
 
 The current implementation represents Version 1 of the BMS architecture and is being developed as a simulation-first platform before future embedded hardware implementation.
 
-The BMS consists of the following major modules:
+The BMS consists of the following major modules
+
 #System Architecture
 - Battery Pack Model
 - Cell Voltage Monitoring
 - Pack Current Measurement
 - Cell Temperature Monitoring
--SOC Estimation
+- SOC Estimation
 - SOH Estimation
 - Cell Imbalance Detection
 - Passive Cell Balancing
@@ -25,7 +26,9 @@ The BMS consists of the following major modules:
 - Main Contactor Control
 - Contactor Fault Diagnostics
 - BMS Monitoring Dashboard
+
 #Key Features
+
 #Battery Monitoring
 The system monitors:
 - Individual cell voltages
@@ -37,6 +40,7 @@ The system monitors:
 - Maximum cell temperature
 - SOC
 - SOH
+
 #Protection
 The protection system detects:
 | Fault                     | Code |
